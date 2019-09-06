@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="unm-TK-LQq">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Employees Table View Controller-->
+        <scene sceneID="IQ7-gb-Ufb">
+            <objects>
+                <tableViewController id="unm-TK-LQq" customClass="EmployeesTableViewController" customModule="MyProperlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fzf-Eh-VbK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmployeesCell" rowHeight="64" id="wY5-UX-Dyu" customClass="EmployeeTableViewCell" customModule="MyProperlyApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wY5-UX-Dyu" id="Hyz-iw-dKD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P36-qg-2Ix">
+                                            <rect key="frame" x="26" y="16" width="62" height="32"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IZ-1K-Bdy">
+                                            <rect key="frame" x="93" y="16" width="14.666666666666671" height="32"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="seniority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3F5-FU-qXY">
+                                            <rect key="frame" x="300.33333333333331" y="16" width="68.666666666666686" height="32"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="P36-qg-2Ix" firstAttribute="top" secondItem="Hyz-iw-dKD" secondAttribute="topMargin" constant="5" id="6cX-L6-Bih"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3F5-FU-qXY" secondAttribute="bottom" constant="5" id="MNa-Pi-Ekv"/>
+                                        <constraint firstItem="8IZ-1K-Bdy" firstAttribute="leading" secondItem="P36-qg-2Ix" secondAttribute="trailing" constant="5" id="QxE-Ml-jOa"/>
+                                        <constraint firstItem="P36-qg-2Ix" firstAttribute="leading" secondItem="Hyz-iw-dKD" secondAttribute="leadingMargin" constant="10" id="WZj-Dm-LFk"/>
+                                        <constraint firstItem="3F5-FU-qXY" firstAttribute="top" secondItem="Hyz-iw-dKD" secondAttribute="topMargin" constant="5" id="cTv-LL-ddv"/>
+                                        <constraint firstItem="8IZ-1K-Bdy" firstAttribute="leading" secondItem="P36-qg-2Ix" secondAttribute="trailing" constant="5" id="qay-eC-Dnh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="P36-qg-2Ix" secondAttribute="bottom" constant="5" id="tqD-bA-WLl"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8IZ-1K-Bdy" secondAttribute="bottom" constant="5" id="ved-3L-WSS"/>
+                                        <constraint firstItem="8IZ-1K-Bdy" firstAttribute="top" secondItem="Hyz-iw-dKD" secondAttribute="topMargin" constant="5" id="vxM-AM-67s"/>
+                                        <constraint firstItem="3F5-FU-qXY" firstAttribute="trailing" secondItem="Hyz-iw-dKD" secondAttribute="trailingMargin" constant="10" id="wnt-Rp-vLi"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="idLabel" destination="8IZ-1K-Bdy" id="Qlh-y5-LvP"/>
+                                    <outlet property="nameLabel" destination="P36-qg-2Ix" id="eco-qV-iga"/>
+                                    <outlet property="seniorityLabel" destination="3F5-FU-qXY" id="ofx-43-C3d"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="unm-TK-LQq" id="GJK-d8-lHO"/>
+                            <outlet property="delegate" destination="unm-TK-LQq" id="dKV-8f-9qf"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xyA-EX-qaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="-65"/>
+        </scene>
+    </scenes>
+</document>
