@@ -9,13 +9,14 @@
 import Foundation
 
 class DataSourceData: DataSource {
-    static func getAllEmployees() -> [Employee]  {
+    //var data
+    func getAllEmployees() -> [Employee]  {
         return employeesAttributes.map({ attributes in
             return Employee(name: attributes["name"]!, id: attributes["id"]!, seniority: attributes["seniority"]!)
         })
     }
     
-    static let employeesAttributes = [
+    let employeesAttributes = [
         ["name" : "David", "id" : "1017233462", "seniority" : "Junior"],
         ["name" : "Maria", "id" : "2002988123", "seniority" : "Senior"],
         ["name" : "Camilo", "id" : "10293837465", "seniority" : "Semi-Senior"]

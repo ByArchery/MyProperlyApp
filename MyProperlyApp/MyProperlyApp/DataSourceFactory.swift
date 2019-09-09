@@ -9,9 +9,9 @@
 import Foundation
 
 class DataSourceFactory {
-    var employeesData = DataSourceData()
     
-    func obtainDataSource() -> DataSourceData {
-        return employeesData
+    func obtainDataSource() -> DataSource {
+        let data = DataSourceData()
+        return data
     }
 }

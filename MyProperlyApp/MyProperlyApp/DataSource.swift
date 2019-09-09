@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DataSource {
-    static func getAllEmployees()  -> [Employee]
+    func getAllEmployees()  -> [Employee]
 }
