@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		766EF7032322E44200599CCA /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766EF7022322E44200599CCA /* DataSource.swift */; };
-		766EF7052322EA9000599CCA /* EmployeesDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766EF7042322EA9000599CCA /* EmployeesDataSourceFactory.swift */; };
+		766EF7052322EA9000599CCA /* DataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766EF7042322EA9000599CCA /* DataSourceFactory.swift */; };
 		76B19126232156C700978DBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B19125232156C700978DBA /* AppDelegate.swift */; };
 		76B1912B232156C700978DBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B19129232156C700978DBA /* Main.storyboard */; };
 		76B1912D232156C800978DBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76B1912C232156C800978DBA /* Assets.xcassets */; };
@@ -18,6 +18,7 @@
 		76B1915423215CF000978DBA /* EmployeesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B1915323215CF000978DBA /* EmployeesTableViewController.swift */; };
 		76B191562321616D00978DBA /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B191552321616D00978DBA /* EmployeeTableViewCell.swift */; };
 		76B1915823216DE500978DBA /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B1915723216DE500978DBA /* Employee.swift */; };
+		76C10267232699C400847BD3 /* DataSourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C10266232699C400847BD3 /* DataSourceData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		766EF7022322E44200599CCA /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		766EF7042322EA9000599CCA /* EmployeesDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesDataSourceFactory.swift; sourceTree = "<group>"; };
+		766EF7042322EA9000599CCA /* DataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceFactory.swift; sourceTree = "<group>"; };
 		76B19122232156C700978DBA /* MyProperlyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProperlyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B19125232156C700978DBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76B1912A232156C700978DBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		76B1915323215CF000978DBA /* EmployeesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewController.swift; sourceTree = "<group>"; };
 		76B191552321616D00978DBA /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 		76B1915723216DE500978DBA /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		76C10266232699C400847BD3 /* DataSourceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,8 @@
 			children = (
 				76B1915723216DE500978DBA /* Employee.swift */,
 				766EF7022322E44200599CCA /* DataSource.swift */,
-				766EF7042322EA9000599CCA /* EmployeesDataSourceFactory.swift */,
+				76C10266232699C400847BD3 /* DataSourceData.swift */,
+				766EF7042322EA9000599CCA /* DataSourceFactory.swift */,
 				76B1915323215CF000978DBA /* EmployeesTableViewController.swift */,
 				76B191552321616D00978DBA /* EmployeeTableViewCell.swift */,
 				76B19129232156C700978DBA /* Main.storyboard */,
@@ -268,11 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				766EF7052322EA9000599CCA /* EmployeesDataSourceFactory.swift in Sources */,
+				766EF7052322EA9000599CCA /* DataSourceFactory.swift in Sources */,
 				766EF7032322E44200599CCA /* DataSource.swift in Sources */,
 				76B19126232156C700978DBA /* AppDelegate.swift in Sources */,
 				76B1915823216DE500978DBA /* Employee.swift in Sources */,
 				76B1915423215CF000978DBA /* EmployeesTableViewController.swift in Sources */,
+				76C10267232699C400847BD3 /* DataSourceData.swift in Sources */,
 				76B191562321616D00978DBA /* EmployeeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
