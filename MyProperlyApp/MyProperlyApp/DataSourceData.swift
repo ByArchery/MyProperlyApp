@@ -8,18 +8,25 @@
 
 import Foundation
 
+extension Notification.Name {
+    static let dataSourceChangeSimulation = Notification.Name("dataSourceChangeSimulation")
+}
+
 class DataSourceData: DataSource {
-    func getAllEmployees() -> [Employee] {
-        return employeesAttributes.map({ attributes in
+    var changeObserver: () -> Void = {}
+    
+    func getAllEmployees() -> Employee {
+        // deberia suscribirse para recibir esas notificaciones
+        return employeesAttributes.randomElement().map({ attributes in
             return Employee(name: attributes["name"]!, id: attributes["id"]!, seniority: attributes["seniority"]!)
-        })
+        })!
     }
     
     let employeesAttributes = [
         ["name" : "David", "id" : "1017233462", "seniority" : "Junior"],
         ["name" : "Maria", "id" : "2002988123", "seniority" : "Senior"],
-        ["name" : "Camilo", "id" : "10293837465", "seniority" : "Semi-Senior"]
-//        ["name" : "Andres", "id" : "636345645655", "seniority" : "Junior"],
+        ["name" : "Camilo", "id" : "10293837465", "seniority" : "Semi-Senior"],
+        ["name" : "Andres", "id" : "636345645655", "seniority" : "Junior"]
 //        ["name" : "Felipe", "id" : "3521145345", "seniority" : "Senior"],
 //        ["name" : "Alex", "id" : "8784762", "seniority" : "SeniorAdv"],
 //        ["name" : "Sofia", "id" : "2345678486", "seniority" : "JuniorAdv"],
@@ -40,4 +47,13 @@ class DataSourceData: DataSource {
 //        ["name" : "Olga", "id" : "34657457567", "seniority" : "Senior"],
 //        ["name" : "David", "id" : "1101928237436", "seniority" : "SeniorAdv"]
     ]
+    
+    init() {
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationHandler(notification:)), name: .dataSourceChangeSimulation, object: nil)
+    }
+    
+    @objc func notificationHandler(notification: Notification) {
+        // aqui estoy simulando que hubo un cambio en la base de datos
+        changeObserver()
+    }
 }

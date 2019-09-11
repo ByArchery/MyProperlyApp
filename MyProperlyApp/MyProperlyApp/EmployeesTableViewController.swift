@@ -11,19 +11,19 @@ import UIKit
 class EmployeesTableViewController: UITableViewController {
 
     var dataSource = DataSourceFactory().obtainDataSource()
-    var employees: [Employee] = []
-    var count = 0
+    var employees: Employee = Employee(name: "", id: "", seniority: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataSource.changeObserver = {
+            print("hay un cambio en el datasource debo recargar datos")
+        }
         employees = dataSource.getAllEmployees()
     }
     
     @IBAction func insertNewEmployee() {
-        for i in 0...2 {
-            employees.append(dataSource.getAllEmployees().randomElement()!)
-        }
-        tableView.reloadData()
+        // enviar una notificacion unicamente
+        NotificationCenter.default.post(name: .dataSourceChangeSimulation, object: nil)
     }
 }
 
@@ -33,13 +33,13 @@ extension EmployeesTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return employees.count
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeesCell", for: indexPath) as! EmployeeTableViewCell
         
-        cell.employee = employees[indexPath.row]
+        cell.employee = employees
         
         return cell
     }

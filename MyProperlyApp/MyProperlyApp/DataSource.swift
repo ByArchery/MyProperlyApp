@@ -9,5 +9,6 @@
 import Foundation
 
 protocol DataSource {
-    func getAllEmployees() -> [Employee]
+    var changeObserver: () -> Void { get set }
+    func getAllEmployees() -> Employee
 }
