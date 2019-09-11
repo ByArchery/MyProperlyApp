@@ -9,8 +9,7 @@
 import Foundation
 
 class DataSourceData: DataSource {
-    //var data
-    func getAllEmployees() -> [Employee]  {
+    func getAllEmployees() -> [Employee] {
         return employeesAttributes.map({ attributes in
             return Employee(name: attributes["name"]!, id: attributes["id"]!, seniority: attributes["seniority"]!)
         })
@@ -20,5 +19,25 @@ class DataSourceData: DataSource {
         ["name" : "David", "id" : "1017233462", "seniority" : "Junior"],
         ["name" : "Maria", "id" : "2002988123", "seniority" : "Senior"],
         ["name" : "Camilo", "id" : "10293837465", "seniority" : "Semi-Senior"]
+//        ["name" : "Andres", "id" : "636345645655", "seniority" : "Junior"],
+//        ["name" : "Felipe", "id" : "3521145345", "seniority" : "Senior"],
+//        ["name" : "Alex", "id" : "8784762", "seniority" : "SeniorAdv"],
+//        ["name" : "Sofia", "id" : "2345678486", "seniority" : "JuniorAdv"],
+//        ["name" : "Mario", "id" : "187857673", "seniority" : "SoftwareDesigner"],
+//        ["name" : "Sebastian", "id" : "16345895", "seniority" : "Senior"],
+//        ["name" : "Alberto", "id" : "765432", "seniority" : "Senior2"],
+//        ["name" : "Ernesto", "id" : "234565586", "seniority" : "Senior"],
+//        ["name" : "Santiago", "id" : "243374567", "seniority" : "Junior"],
+//        ["name" : "Julian", "id" : "2363475", "seniority" : "Semi-SeniorAdv"],
+//        ["name" : "Pablo", "id" : "5698678655", "seniority" : "Senior"],
+//        ["name" : "Sergio", "id" : "785696578", "seniority" : "Senior"],
+//        ["name" : "Evangelyne", "id" : "254363678", "seniority" : "Senior1"],
+//        ["name" : "Sylvie", "id" : "907698757673", "seniority" : "Junior"],
+//        ["name" : "Amalie", "id" : "6745856867564", "seniority" : "Junior"],
+//        ["name" : "Lucy", "id" : "3456784", "seniority" : "JuniorAdv"],
+//        ["name" : "Lucile", "id" : "3564736456", "seniority" : "Senior"],
+//        ["name" : "Angela", "id" : "7564467", "seniority" : "Semi-Senior"],
+//        ["name" : "Olga", "id" : "34657457567", "seniority" : "Senior"],
+//        ["name" : "David", "id" : "1101928237436", "seniority" : "SeniorAdv"]
     ]
 }

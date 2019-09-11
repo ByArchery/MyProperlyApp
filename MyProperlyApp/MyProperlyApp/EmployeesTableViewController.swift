@@ -10,18 +10,28 @@ import UIKit
 
 class EmployeesTableViewController: UITableViewController {
 
-    var employeesFromDataSource = DataSourceFactory().obtainDataSource()
+    var dataSource = DataSourceFactory().obtainDataSource()
     var employees: [Employee] = []
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        employees = employeesFromDataSource.getAllEmployees()
+        employees = dataSource.getAllEmployees()
     }
+    
+    @IBAction func insertNewEmployee() {
+        for i in 0...2 {
+            employees.append(dataSource.getAllEmployees().randomElement()!)
+        }
+        tableView.reloadData()
+    }
+}
 
+extension EmployeesTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return employees.count
     }
@@ -30,7 +40,7 @@ class EmployeesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeesCell", for: indexPath) as! EmployeeTableViewCell
         
         cell.employee = employees[indexPath.row]
-
+        
         return cell
     }
     

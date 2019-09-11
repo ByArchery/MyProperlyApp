@@ -10,7 +10,6 @@ import UIKit
 
 class EmployeeTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var seniorityLabel: UILabel!
@@ -22,6 +21,7 @@ class EmployeeTableViewCell: UITableViewCell {
             self.seniorityLabel.text = employee.seniority
         }
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

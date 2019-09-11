@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Employee {
+class Employee: EmployeeProtocol {
     var name: String
     var id: String
     var seniority: String

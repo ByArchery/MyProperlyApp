@@ -9,7 +9,6 @@
 import Foundation
 
 class DataSourceFactory {
-    
     func obtainDataSource() -> DataSource {
         let data = DataSourceData()
         return data
