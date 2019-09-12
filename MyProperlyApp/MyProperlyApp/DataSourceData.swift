@@ -15,11 +15,11 @@ extension Notification.Name {
 class DataSourceData: DataSource {
     var changeObserver: () -> Void = {}
     
-    func getAllEmployees() -> Employee {
+    func getAllEmployees() -> [Employee] {
         // deberia suscribirse para recibir esas notificaciones
-        return employeesAttributes.randomElement().map({ attributes in
+        return employeesAttributes.map({ attributes in
             return Employee(name: attributes["name"]!, id: attributes["id"]!, seniority: attributes["seniority"]!)
-        })!
+        })
     }
     
     let employeesAttributes = [

@@ -11,7 +11,7 @@ import UIKit
 class EmployeesTableViewController: UITableViewController {
 
     var dataSource = DataSourceFactory().obtainDataSource()
-    var employees: Employee = Employee(name: "", id: "", seniority: "")
+    var employees: [Employee] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +33,13 @@ extension EmployeesTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return employees.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeesCell", for: indexPath) as! EmployeeTableViewCell
         
-        cell.employee = employees
+        cell.employee = employees[indexPath.row]
         
         return cell
     }
